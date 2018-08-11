@@ -23,7 +23,8 @@ final class CowsayMiddleware implements MiddlewareInterface
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         $response = $handler->handle($request);
+        $line = (string)$response->getStatusCode() . ' Moooo!';
 
-        return asciiArtHeaders($response, self::HEADER, ...preg_split('/(\r\n?|\n)/', $this->cowSay->say($response->getStatusCode())));
+        return asciiArtHeaders($response, self::HEADER, ...preg_split('/(\r\n?|\n)/', $this->cowSay->say($line)));
     }
 }
