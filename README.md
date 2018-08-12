@@ -1,4 +1,4 @@
-# [PSR-15](http://www.php-fig.org/psr/psr-15/) middleware that adds a cat to your headers
+# [PSR-15](http://www.php-fig.org/psr/psr-15/) middleware that adds a cow's moo to your headers
 
 [![Total Downloads](https://poser.pugx.org/WyriHaximus/psr-15-cowsay/downloads.png)](https://packagist.org/packages/WyriHaximus/psr-15-cowsay/stats)
 [![License](https://poser.pugx.org/WyriHaximus/psr-15-cowsay/license.png)](https://packagist.org/packages/wyrihaximus/psr-15-cowsay)
