@@ -32,7 +32,7 @@ final class CowsayMiddlewareTest extends TestCase
 
     public function testCustomAnimal()
     {
-        $cows = new CowsayMiddleware(new class implements AnimalInterface {
+        $cows = new CowsayMiddleware(new class() implements AnimalInterface {
             public function say($text)
             {
                 return $text;
