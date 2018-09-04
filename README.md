@@ -18,6 +18,8 @@ composer require wyrihaximus/psr-15-cowsay
 $middleware = new CowsayMiddleware();
 ```
 
+Additionally any class implementing the `Cowsayphp\AnimalInterface` interface can be passed into `CowsayMiddleware`.
+
 ## Inspired by ##
 
 [`nixCraft`](https://twitter.com/nixcraft/status/1027639812378054656)

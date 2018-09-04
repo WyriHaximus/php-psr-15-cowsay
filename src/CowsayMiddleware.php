@@ -2,6 +2,7 @@
 
 namespace WyriHaximus\Psr15\Cowsay;
 
+use Cowsayphp\AnimalInterface;
 use Cowsayphp\Farm;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -13,11 +14,16 @@ final class CowsayMiddleware implements MiddlewareInterface
 {
     const HEADER = 'X-Cowsay';
 
-    private $cowSay;
+    /** @var AnimalInterface */
+    private $animal;
 
-    public function __construct()
+    public function __construct(AnimalInterface $animal = null)
     {
-        $this->cowSay = Farm::create(Farm\Cow::class);
+        if (!($animal instanceof AnimalInterface)) {
+            $animal = Farm::create(Farm\Cow::class);
+        }
+
+        $this->animal = $animal;
     }
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
@@ -25,6 +31,6 @@ final class CowsayMiddleware implements MiddlewareInterface
         $response = $handler->handle($request);
         $line = (string)$response->getStatusCode() . ' Moooo!';
 
-        return asciiArtHeaders($response, self::HEADER, ...preg_split('/(\r\n?|\n)/', $this->cowSay->say($line)));
+        return asciiArtHeaders($response, self::HEADER, ...preg_split('/(\r\n?|\n)/', $this->animal->say($line)));
     }
 }
