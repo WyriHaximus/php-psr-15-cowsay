@@ -1491,7 +1491,7 @@
                     "homepage": "http://blog.astrumfutura.com"
                 },
                 {
-                    "name": "Théo FIDRY",
+                    "name": "Théo Fidry",
                     "email": "theo.fidry@gmail.com"
                 }
             ],
@@ -4239,16 +4239,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "2.1.1",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "c3c330192bc9cc51b7e9ce968ff721dc32ffa986"
+                "reference": "37bf68b428850ee26ed7c3be6c26236dd95a95f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/c3c330192bc9cc51b7e9ce968ff721dc32ffa986",
-                "reference": "c3c330192bc9cc51b7e9ce968ff721dc32ffa986",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/37bf68b428850ee26ed7c3be6c26236dd95a95f1",
+                "reference": "37bf68b428850ee26ed7c3be6c26236dd95a95f1",
                 "shasum": ""
             },
             "require": {
@@ -4301,7 +4301,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2019-01-05T20:13:32+00:00"
+            "time": "2019-04-29T21:11:00+00:00"
         }
     ],
     "aliases": [],
